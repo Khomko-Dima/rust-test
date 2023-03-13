@@ -34,6 +34,26 @@ fn main() {
     for i in 0..5 {
         println!("for: {}", i);
     }
+
+    let value = 23;
+    match value {
+        10 => println!("Num is 10"),
+        23 => {
+            println!("Num is 23");
+        },
+        10..=50 => {
+            println!("Num is between"); //не выполнится т.к совпадение выше
+        },
+        _ => {
+            println!("Error");
+        }
+    }
+    let value2 = match value {
+        2 => 1,
+        3 => 10,
+        _ => 0
+    };
+    println!("value2 {}", value2)
 }
 //integer, 1 5 7 9
 //i8 i16 i32 i64 i128 isize
